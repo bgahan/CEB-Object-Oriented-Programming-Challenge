@@ -1,0 +1,28 @@
+{
+  "name": "ceb-object-oriented-programming-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgahan/CEB-Object-Oriented-Programming-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgahan/CEB-Object-Oriented-Programming-Challenge/issues"
+  },
+  "homepage": "https://github.com/bgahan/CEB-Object-Oriented-Programming-Challenge#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.1.0"
+  }
+}
