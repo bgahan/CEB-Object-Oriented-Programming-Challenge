@@ -6,16 +6,24 @@ function generateTeam(team) {
     }
 
     function buildEngineer(engineer) {
-
+        return `<div>
+            <h1>${engineer.getName()}</h1>
+        </div>`
     }
 
     function buildIntern(intern) {
-
+        return `<div>
+            <h1>${intern.getName()}</h1>
+        </div>`
     }
 
     const arr = []
 
     arr.push(team.filter(emp => emp.getRole === 'Manager').map(manager => buildManager(manager)))
+
+    arr.push(team.filter(emp => emp.getRole === 'Engineer').map(engineer => buildEngineer(engineer)))
+
+    arr.push(team.filter(emp => emp.getRole === 'Intern').map(intern => buildIntern(intern)))
 
 
     return arr.join("")

@@ -61,15 +61,67 @@ function createTeam() {
     }
 
     function createEngineer() {
-
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'engineerName',
+                message: 'What is the name of the Engineer?'
+            },
+            {
+                type: 'input',
+                name: 'engineerId',
+                message: 'What is the Id of the Engineer?'
+            },
+            {
+                type: 'input',
+                name: 'engineerEmail',
+                message: 'What is the email of the Engineer?'
+            },
+            {
+                type: 'input',
+                name: 'engineerGithub',
+                message: 'What is the GitHub of the Engineer?'
+            }
+        ]).then(answers => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub)
+            teamMembers.push(engineer)
+            console.log(teamMembers);
+            whichMember()
+        })
     }
 
     function createIntern() {
-
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'internName',
+                message: 'What is the name of the Intern?'
+            },
+            {
+                type: 'input',
+                name: 'internId',
+                message: 'What is the Id of the Intern?'
+            },
+            {
+                type: 'input',
+                name: 'internEmail',
+                message: 'What is the email of the Intern?'
+            },
+            {
+                type: 'input',
+                name: 'internGithub',
+                message: 'What is the GitHub of the Intern?'
+            }
+        ]).then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internGithub)
+            teamMembers.push(intern)
+            console.log(teamMembers);
+            whichMember()
+        })
     }
 
     function buildTeam() {
-        fs.writeFile('team.html', template(teamMembers), function(err) {
+        fs.writeFile('team.html', template(teamMembers), function (err) {
             if (err) throw err
             console.log('Team has been built!')
         })
