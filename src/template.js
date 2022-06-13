@@ -2,18 +2,36 @@ function generateTeam(team) {
     function buildManager(manager) {
         return `<div>
             <h1>${manager.getName()}</h1>
+            <h2>${manager.getRole()}</h2>
+            <ul>
+                <li>ID: ${manager.getId()}</li>
+                <li>Email: ${manager.getEmail()}</li>
+                <li>Office number: ${manager.getOfficeNumber()}</li>
+            </ul>
         </div>`
     }
 
     function buildEngineer(engineer) {
         return `<div>
             <h1>${engineer.getName()}</h1>
+            <h2>${engineer.getRole()}</h2>
+            <ul>
+                <li>ID: ${engineer.getId()}</li>
+                <li>Email: ${engineer.getEmail()}</li>
+                <li>GitHub: ${engineer.getGithub()}</li>
+            </ul>
         </div>`
     }
 
     function buildIntern(intern) {
         return `<div>
             <h1>${intern.getName()}</h1>
+            <h2>${intern.getRole()}</h2>
+            <ul>
+                <li>ID: ${intern.getId()}</li>
+                <li>Email: ${intern.getEmail()}</li>
+                <li>School: ${intern.getSchool()}</li>
+            </ul>
         </div>`
     }
 
