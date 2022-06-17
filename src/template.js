@@ -7,7 +7,7 @@ function generateTeam(team) {
                 <h3>${manager.getRole()}</h3> 
             </div>
                 <p>ID: ${manager.getId()}</p>
-                <p>Email: ${manager.getEmail()}</p>
+                <p>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></p>
                 <p>Office number: ${manager.getOfficeNumber()}</p>
         </div>`
     }
@@ -19,8 +19,8 @@ function generateTeam(team) {
             <h3>${engineer.getRole()}</h3>
             </div>
                 <p>ID: ${engineer.getId()}</p>
-                <p>Email: ${engineer.getEmail()}</p>
-                <p>GitHub: ${engineer.getGithub()}</p>
+                <p>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
+                <p>GitHub: <a href="${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></p>
         </div>`
     }
 
@@ -31,7 +31,7 @@ function generateTeam(team) {
             <h3>${intern.getRole()}</h3>
             </div>
                 <p>ID: ${intern.getId()}</p>
-                <p>Email: ${intern.getEmail()}</p>
+                <p>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></p>
                 <p>School: ${intern.getSchool()}</p>
         </div>`
     }
