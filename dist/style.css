@@ -1,3 +1,29 @@
+header {
+    padding: 20px 35px;
+    background: navy;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    top: 0;
+    text-align: center;
+}
+
+p {
+    background-color: white;
+}
+
 .container {
-    background-color: red;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.employee {
+    background: rgb(246, 245, 245);
+    padding: 20px;
+}
+
+.title {
+    background-color: cyan;
 }

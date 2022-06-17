@@ -1,37 +1,37 @@
 function generateTeam(team) {
     function buildManager(manager) {
-        return `<div>
-            <h1>${manager.getName()}</h1>
-            <h2>${manager.getRole()}</h2>
-            <ul>
-                <li>ID: ${manager.getId()}</li>
-                <li>Email: ${manager.getEmail()}</li>
-                <li>Office number: ${manager.getOfficeNumber()}</li>
-            </ul>
+        return `<div class="employee">
+            <div class="title">
+                <h2>${manager.getName()}</h2>
+                <h3>${manager.getRole()}</h3> 
+            </div>
+                <p>ID: ${manager.getId()}</p>
+                <p>Email: ${manager.getEmail()}</p>
+                <p>Office number: ${manager.getOfficeNumber()}</p>
         </div>`
     }
 
     function buildEngineer(engineer) {
-        return `<div>
-            <h1>${engineer.getName()}</h1>
-            <h2>${engineer.getRole()}</h2>
-            <ul>
-                <li>ID: ${engineer.getId()}</li>
-                <li>Email: ${engineer.getEmail()}</li>
-                <li>GitHub: ${engineer.getGithub()}</li>
-            </ul>
+        return `<div class="employee">
+        <div class="title">
+            <h2>${engineer.getName()}</h2>
+            <h3>${engineer.getRole()}</h3>
+            </div>
+                <p>ID: ${engineer.getId()}</p>
+                <p>Email: ${engineer.getEmail()}</p>
+                <p>GitHub: ${engineer.getGithub()}</p>
         </div>`
     }
 
     function buildIntern(intern) {
-        return `<div>
-            <h1>${intern.getName()}</h1>
-            <h2>${intern.getRole()}</h2>
-            <ul>
-                <li>ID: ${intern.getId()}</li>
-                <li>Email: ${intern.getEmail()}</li>
-                <li>School: ${intern.getSchool()}</li>
-            </ul>
+        return `<div class="employee">
+        <div class="title">
+            <h2>${intern.getName()}</h2>
+            <h3>${intern.getRole()}</h3>
+            </div>
+                <p>ID: ${intern.getId()}</p>
+                <p>Email: ${intern.getEmail()}</p>
+                <p>School: ${intern.getSchool()}</p>
         </div>`
     }
 
@@ -58,9 +58,12 @@ module.exports = team => {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/style.css">
-    <title>Employees</title>
+    <title>My Team</title>
 </head>
 <body>
+    <header>
+        <h1>My Team</h1>
+    </header>
     <div class='container'>
         ${generateTeam(team)}
     </div>
