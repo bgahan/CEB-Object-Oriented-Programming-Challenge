@@ -1,3 +1,4 @@
+// create specific HTML elements based on the type of employee the user entered
 function generateTeam(team) {
     function buildManager(manager) {
         return `<div class="employee">
@@ -35,6 +36,7 @@ function generateTeam(team) {
         </div>`
     }
 
+    // build an array with all the new html data and join together
     const arr = []
 
     arr.push(team.filter(emp => emp.getRole() === 'Manager').map(manager => buildManager(manager)))
@@ -49,7 +51,7 @@ function generateTeam(team) {
 
 
 
-
+// add and export html data based on team information
 module.exports = team => {
     return `<!DOCTYPE html>
 <html lang="en">
