@@ -37,11 +37,11 @@ function generateTeam(team) {
 
     const arr = []
 
-    arr.push(team.filter(emp => emp.getRole === 'Manager').map(manager => buildManager(manager)))
+    arr.push(team.filter(emp => emp.getRole() === 'Manager').map(manager => buildManager(manager)))
 
-    arr.push(team.filter(emp => emp.getRole === 'Engineer').map(engineer => buildEngineer(engineer)))
+    arr.push(team.filter(emp => emp.getRole() === 'Engineer').map(engineer => buildEngineer(engineer)))
 
-    arr.push(team.filter(emp => emp.getRole === 'Intern').map(intern => buildIntern(intern)))
+    arr.push(team.filter(emp => emp.getRole() === 'Intern').map(intern => buildIntern(intern)))
 
 
     return arr.join("")
@@ -57,10 +57,11 @@ module.exports = team => {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Employees</title>
 </head>
 <body>
-    <div>
+    <div class='container'>
         ${generateTeam(team)}
     </div>
 </body>

@@ -16,17 +16,35 @@ function createTeam() {
             {
                 type: 'input',
                 name: 'managerName',
-                message: 'What is the name of the Manager?'
+                message: 'What is the name of the Manager?',
+                validate: answer => {
+                    if(answer !== '') {
+                        return true
+                    }
+                    return 'this is a required input'
+                }
             },
             {
                 type: 'input',
                 name: 'managerId',
-                message: 'What is the Id of the Manager?'
+                message: 'What is the Id of the Manager?',
+                validate: answer => {
+                    if(!isNaN(answer)) {
+                        return true
+                    }
+                    return 'this is must be a number'
+                }
             },
             {
                 type: 'input',
                 name: 'managerEmail',
-                message: 'What is the email of the Manager?'
+                message: 'What is the email of the Manager?',
+                validate: answer => {
+                    if(answer.match(/\S+@\S+\.\S+/)) {
+                        return true
+                    }
+                    return 'this is must be a valid email address'
+                }
             },
             {
                 type: 'input',
@@ -110,7 +128,7 @@ function createTeam() {
             {
                 type: 'input',
                 name: 'internGithub',
-                message: 'What is the GitHub of the Intern?'
+                message: 'What School does the Intern go to?'
             }
         ]).then(answers => {
             const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internGithub)
